@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./Resultados.css";
 import trashCan from "./images/delete.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -45,40 +45,55 @@ export default function Resultados({
       date2UNIX = new Date(date2UNIX).setHours(0, 0, 0, 0);
       nuevaLista = nuevaLista.filter(
         (tarea) =>
-          date1UNIX <= (new Date(tarea.fechaCreacion).getTime()) && date2UNIX >= (new Date(tarea.fechaCreacion).getTime())
+          date1UNIX <= new Date(tarea.fechaCreacion).getTime() &&
+          date2UNIX >= new Date(tarea.fechaCreacion).getTime()
       );
     }
     return nuevaLista;
   };
   let tareasFiltradas = crearLista();
+
   return (
     <div className="contenedorResultados">
       <div className="titleResultados">
         <p>Pendiente por hacer: </p>
       </div>
-      {tareasFiltradas && tareasFiltradas.map(function (element, index) {
-        return (
-          <div key={index}>
-            <Tareas
-              titulo={element.titulo}
-              fecha={element.fechaCreacion}
-              categoria={element.categorias}
-              check={element.check}
-              click={() => actualizarEstado(element)}
-            />
-          </div>
-        );
-      })}
+      {tareasFiltradas &&
+        tareasFiltradas.map(function(element, index) {
+          return (
+            <div key={index}>
+              <Tareas
+                id={element.id}
+                titulo={element.titulo}
+                fecha={element.fechaCreacion}
+                categoria={element.categorias}
+                check={element.check}
+                click={() => actualizarEstado(element)}
+              />
+            </div>
+          );
+        })}
       {calcularFecha()}
     </div>
   );
 }
 
-function Tareas({ titulo, fecha, categoria, check, click }) {
-  let alertClick = () => {
-    let datos = titulo + " - " + fecha;
-    alert("¿Deseas borrar " + datos + "?");
+function Tareas({ id, titulo, fecha, categoria, check, click }) {
+  const handleClick = (id) => {
+    fetch(`http://localhost:3005/tarea/${id}`, {
+      method: "DELETE",
+    }).then((res) => {
+      alert(`La tarea con id#${id} fue borrada exitosamente`);
+    });
   };
+
+  let fechaEstandar = (fecha) => {
+    let dia = fecha.getDate();
+    let mes = fecha.getMonth() + 1;
+    let year = fecha.getFullYear();
+    return `${dia}-${mes}-${year}`;
+  };
+
   let classN = "";
   check ? (classN = <FontAwesomeIcon icon={faCheckCircle} />) : (classN = "");
   return (
@@ -87,7 +102,9 @@ function Tareas({ titulo, fecha, categoria, check, click }) {
         <div className="detalles-tarea">
           <p className="tarea-titulo">{titulo}</p>
           <p className="tarea-fecha">
-            {`${fecha} - Hace ${calcularFecha(fecha)} dias`}
+            {`${fechaEstandar(new Date(fecha))} - Hace ${calcularFecha(
+              fecha
+            )} dias`}
           </p>
         </div>
         <div className="categoria-tarea">
@@ -101,7 +118,9 @@ function Tareas({ titulo, fecha, categoria, check, click }) {
         </div>
         <button className="trash-button">
           <img
-            onClick={alertClick}
+            onClick={() => {
+              handleClick(id);
+            }}
             className="trash-can"
             src={trashCan}
             alt="trash-can"

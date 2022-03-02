@@ -39,7 +39,7 @@ div.createContainer {
 
 .tarea-container {
     width: 374px;
-    height: 158px;
+    height: 180px;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
@@ -94,11 +94,73 @@ div.createContainer {
     text-align: center;
     background-color: #f677ad;
     color: #ffffff;
+
     padding: 6px 0;
     border-radius: 15px;
     font-size: 13px;
 }
 
+input#titulo {
+    background-color: #656BDC;
+    width: 162px;
+    color: #ffffff !important;
+    border-style: none;
+    font-size: 13px;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 15px;
+}
+
+input#fecha {
+    background-color: #656BDC;
+    width: 162px;
+    color: #ffffff !important;
+    border-style: none;
+    font-size: 13px;
+    padding: 6px 0;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input#titulo::placeholder {
+
+    color: #ffffff;
+
+}
+
 input#categoria {
-    width: 70px;
+    background-color: #F7B0D2;
+    width: 80px;
+    color: #000000 !important;
+    border-style: none;
+    font-size: 13px;
+    padding: 3px 0;
+    text-align: center;
+    border-radius: 15px;
+
+
+}
+
+
+
+div.contenedorBoton {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 100%;
+
+}
+
+button.buttonTarea {
+    background-color: #f677ad;
+    width: 140px;
+    height: 33px;
+    color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 15px;
+    margin: 0 15px 22px 0;
+    cursor: pointer;
 }
