@@ -6,8 +6,99 @@ div.newTareaContainer {
     width: 1000px;
 }
 
-div.navbar{
+div.navbar {
     display: flex;
     justify-content: flex-start;
-    width: 1000px; 
+    width: 1000px;
+}
+
+div.contenedorBack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+p.subtitleBack{
+    margin-top: 10px;
+}
+
+
+.fontAwesome {
+    margin-top: 5px;
+    font-size: 30px;
+    color: #4044c9;
+}
+
+div.createContainer {
+    display: flex;
+    width: 1000px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarea-container {
+    width: 374px;
+    height: 158px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 3px 3px 7px 0px rgba(197, 197, 197, 0.73);
+    margin: 20px;
+    background-color: #4044c9;
+}
+
+.tarea-contenido {
+    width: 100%;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarea-titulo {
+    font-size: 18px;
+    line-height: 21px;
+    font-style: normal;
+    margin-bottom: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+.tarea-fecha {
+    color: #fee504;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: lighter;
+}
+
+.categoria-tarea {
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    width: 100px;
+}
+
+.tarea-titulo-categoria {
+    display: inline-block;
+    width: 152px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #ffffff;
+}
+
+.tarea-categoria {
+    display: inline-block;
+    text-align: center;
+    background-color: #f677ad;
+    color: #ffffff;
+    padding: 6px 0;
+    border-radius: 15px;
+    font-size: 13px;
+}
+
+input#categoria {
+    width: 70px;
 }
