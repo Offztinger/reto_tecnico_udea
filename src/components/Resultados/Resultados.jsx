@@ -1,3 +1,4 @@
+import React from 'react';
 import "./Resultados.css";
 import trashCan from "./images/delete.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

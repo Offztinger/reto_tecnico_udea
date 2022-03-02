@@ -1,0 +1,13 @@
+div.newTareaContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 1000px;
+}
+
+div.navbar{
+    display: flex;
+    justify-content: flex-start;
+    width: 1000px; 
+}

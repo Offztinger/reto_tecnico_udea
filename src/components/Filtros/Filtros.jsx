@@ -1,6 +1,8 @@
+import React from "react";
 import "./Filtros.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Filtros({
   checked,
@@ -10,11 +12,6 @@ export default function Filtros({
   date2,
   setDate2,
 }) {
-
-  let onClickTarea = () =>{
-    console.log("Test")
-  }
-
   let onChangeDate1 = (event) => {
     date2 = new Date(date2).getTime();
     date1 = new Date(event.target.value).getTime();
@@ -26,7 +23,7 @@ export default function Filtros({
       const year1 = yesterdayDate.getFullYear();
       let month1 = yesterdayDate.getMonth() + 1;
       let day1 = yesterdayDate.getDate();
-      /*Condiconales del metodo zero() extraidos de app.js */
+      /*Condiconales del metodo zero() extraidos de app.js en otro proyecto */
       if (day1 < 10) {
         day1 = "0" + day1;
       }
@@ -105,9 +102,9 @@ export default function Filtros({
           </select>
           <div className="añadirTarea">
             <p>Añadir tarea:</p>
-            <button className="buttonTarea" onClick={onClickTarea}>
+            <Link to="/tarea">
               <FontAwesomeIcon className="fontAwesome" icon={faCirclePlus} />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
