@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+div.contenedorFiltros {
+  display: flex;
+  background: #ffffff;
+  width: 1000px;
+  height: 150px;
+}
+
+div.contenedorInput {
+  display: flex;
+
+  width: 100%;
+}
+
+div.dateInput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  margin-left: 50px ;
+}
+
+div.dateItem{
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+
+input.date {
+  width: 199px;
+  height: 43px;
+  margin: 0 15px;
+}
+
+div.selectInput {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 50%;
+  margin-top: 19px;
+}
+
+select.select {
+  width: 199px;
+  height: 43px;
+  margin: 0 15px;
+  border-radius: 35px;
+}

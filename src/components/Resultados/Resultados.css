@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+
+div.contenedorResultados {
+  display: flex;
+  width: 1000px;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.titleResultados {
+  display: flex;
+  align-items: flex-end;
+  width: 362px;
+  height: 45px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.tarea-container {
+  width: 374px;
+  height: 158px;
+  display: flex;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 3px 7px 0px rgba(197, 197, 197, 0.73);
+  margin: 20px;
+  background-color: #4044c9;
+}
+
+.tarea-contenido {
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tarea-titulo {
+  font-size: 18px;
+  line-height: 21px;
+  font-style: normal;
+  margin-bottom: 15px;
+  color: white;
+  font-size: 18px;
+}
+
+.tarea-fecha {
+  color: #fee504;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: lighter;
+}
+
+.categoria-tarea {
+  display: flex;
+  flex-direction: column;
+  height: 40%;
+  width: 100px;
+}
+
+.tarea-titulo-categoria {
+  display: inline-block;
+  width: 152px;
+  height: 20px;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+}
+
+.tarea-categoria {
+  display: inline-block;
+  text-align: center;
+  background-color: #f677ad;
+  color: #ffffff;
+  padding: 6px 0;
+  border-radius: 15px;
+  font-size: 13px;
+}
+
+.tarea-interaccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ffffff;
+  border-radius: 7px;
+  height: 28px;
+  width: 27px;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.background-image {
+  background-image: url(https://i.imgur.com/TwVNpk2.png);
+  height: 28px;
+  width: 27px;
+}
+
+.trash-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 27px;
+  background: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+}
+
+.trash-can {
+  height: 28px;
+  width: 27px;
+}
