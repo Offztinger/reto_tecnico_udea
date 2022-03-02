@@ -55,3 +55,22 @@ select.select {
   margin: 0 15px;
   border-radius: 35px;
 }
+
+div.añadirTarea{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+button.buttonTarea{
+  border: none;
+  background-color: white;
+}
+
+.fontAwesome{
+  margin-top: 5px;
+  font-size: 30px;
+  color: #4044c9;
+}

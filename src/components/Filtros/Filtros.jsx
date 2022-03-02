@@ -1,4 +1,6 @@
 import "./Filtros.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 
 export default function Filtros({
   checked,
@@ -8,6 +10,11 @@ export default function Filtros({
   date2,
   setDate2,
 }) {
+
+  let onClickTarea = () =>{
+    console.log("Test")
+  }
+
   let onChangeDate1 = (event) => {
     date2 = new Date(date2).getTime();
     date1 = new Date(event.target.value).getTime();
@@ -37,7 +44,6 @@ export default function Filtros({
   let onChangeDate2 = (event) => {
     date1 = new Date(date1).getTime();
     date2 = new Date(event.target.value).getTime();
-    console.log(new Date(date2));
     /*Definiendo metodo para evitar que la fecha de regreso sea menor a la de partidas */
     if (date1 > date2) {
       alert("La fecha de regreso no puede ser menor a la de partida");
@@ -97,6 +103,12 @@ export default function Filtros({
             <option value="complete">Completado</option>
             <option value="nocomplete">No completado</option>
           </select>
+          <div className="añadirTarea">
+            <p>Añadir tarea:</p>
+            <button className="buttonTarea" onClick={onClickTarea}>
+              <FontAwesomeIcon className="fontAwesome" icon={faCirclePlus} />
+            </button>
+          </div>
         </div>
       </div>
     </div>
