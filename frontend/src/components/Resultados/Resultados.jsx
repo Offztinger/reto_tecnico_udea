@@ -56,7 +56,7 @@ export default function Resultados({
       <div className="titleResultados">
         <p>Pendiente por hacer: </p>
       </div>
-      {tareasFiltradas.map(function (element, index) {
+      {tareasFiltradas && tareasFiltradas.map(function (element, index) {
         return (
           <div key={index}>
             <Tareas
